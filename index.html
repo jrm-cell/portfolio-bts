@@ -265,7 +265,7 @@
       <br>
       <h3>Un DNS c'est quoi ?</h3>
       <p>Le DNS (Domain Name System) est un système qui aide ton ordinateur ou ton téléphone à retrouver un site web à partir de son nom.</p>
-      <a href="TP–AD-DNS-Belerge.pdf" class="cv-btn" download style="display: inline-block; margin-top: 1rem;">Télécharger TP sur le DNS</a>
+      <button class="cv-btn" onclick="openPdfPopup('TP–AD-DNS-Belerge.pdf')" style="display: inline-block; margin-top: 1rem;">🔍 Voir le TP sur le DNS</button>
     </div>
   </div>
 
@@ -275,6 +275,7 @@
       <img src="vlan.jpg" alt="VLAN" class="popup-image">
       <h3>VLAN</h3>
       <p>Description de vos compétences en VLAN. Vous pouvez ajouter ici vos connaissances et expériences avec les réseaux VLAN.</p>
+      <button class="cv-btn" onclick="openPdfPopup('TP-VLAN.pdf')" style="display: inline-block; margin-top: 1rem;">🔍 Voir le TP sur le VLAN</button>
     </div>
   </div>
 
@@ -287,7 +288,7 @@
       <br>
       <p>Le VTP permet de synchroniser automatiquement les informations des VLANs entre plusieurs commutateurs (switches) dans un même domaine VTP.
 Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switch : une seule configuration sur le switch principal suffit.</p>
-      <a href="TP-VTP.pdf" class="cv-btn" download style="display: inline-block; margin-top: 1rem;">Télécharger TP sur le VTP</a>
+      <button class="cv-btn" onclick="openPdfPopup('TP-VTP.pdf')" style="display: inline-block; margin-top: 1rem;">🔍 Voir le TP sur le VTP</button>
     </div>
   </div>
 
@@ -297,6 +298,7 @@ Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switc
       <img src="ssh.png" alt="SSH" class="popup-image">
       <h3>SSH</h3>
       <p>Description de vos compétences en SSH. Vous pouvez ajouter ici vos connaissances et expériences avec les réseaux SSH.</p>
+      <button class="cv-btn" onclick="openPdfPopup('TP-SSH.pdf')" style="display: inline-block; margin-top: 1rem;">🔍 Voir le TP sur SSH</button>
     </div>
   </div>
 
@@ -306,6 +308,7 @@ Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switc
       <img src="glpi.png" alt="GLPI" class="popup-image">
       <h3>GLPI</h3>
       <p>Description de vos compétences en GLPI. Vous pouvez ajouter ici vos connaissances et expériences avec le logiciel GLPI.</p>
+      <button class="cv-btn" onclick="openPdfPopup('TP-GLPI.pdf')" style="display: inline-block; margin-top: 1rem;">🔍 Voir le TP sur GLPI</button>
     </div>
   </div>
 
@@ -315,6 +318,7 @@ Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switc
       <img src="statique.png" alt="Routage Statique" class="popup-image">
       <h3>Routage Statique</h3>
       <p>Description de vos compétences en Routage Statique. Vous pouvez ajouter ici vos connaissances et expériences avec le routage statique.</p>
+      <button class="cv-btn" onclick="openPdfPopup('TP-Routage-Statique.pdf')" style="display: inline-block; margin-top: 1rem;">🔍 Voir le TP sur le Routage Statique</button>
     </div>
   </div>
 
@@ -324,6 +328,7 @@ Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switc
       <img src="dynamique.png" alt="Routage Dynamique" class="popup-image">
       <h3>Routage Dynamique</h3>
       <p>Description de vos compétences en Routage Dynamique. Vous pouvez ajouter ici vos connaissances et expériences avec le routage dynamique.</p>
+      <button class="cv-btn" onclick="openPdfPopup('TP-Routage-Dynamique.pdf')" style="display: inline-block; margin-top: 1rem;">🔍 Voir le TP sur le Routage Dynamique</button>
     </div>
   </div>
 
@@ -333,6 +338,7 @@ Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switc
       <img src="Intervlan.png" alt="InterVlan" class="popup-image">
       <h3>InterVlan</h3>
       <p>Description de vos compétences en InterVlan. Vous pouvez ajouter ici vos connaissances et expériences avec les réseaux InterVlan.</p>
+      <button class="cv-btn" onclick="openPdfPopup('TP-InterVlan.pdf')" style="display: inline-block; margin-top: 1rem;">🔍 Voir le TP sur InterVlan</button>
     </div>
   </div>
 
@@ -375,6 +381,20 @@ Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switc
     </div>
   </div>
 
+  <!-- PDF Popup -->
+  <div id="pdf-popup" class="popup">
+    <div class="popup-content pdf-popup-content">
+      <span class="close" onclick="closePdfPopup()">&times;</span>
+      <h3 id="pdf-title">Document PDF</h3>
+      <div class="pdf-controls">
+        <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Plein écran">
+          <span id="fullscreen-icon">🔍 Mode plein écran</span>
+        </button>
+      </div>
+      <iframe id="pdf-iframe" src="" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
+  </div>
+
   <script>
     function openPopup(popupId) {
       document.getElementById(popupId).style.display = "block";
@@ -388,6 +408,64 @@ Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switc
     window.onclick = function(event) {
       if (event.target.classList.contains('popup')) {
         event.target.style.display = "none";
+      }
+    }
+
+    function openPdfPopup(pdfUrl) {
+      document.getElementById('pdf-iframe').src = pdfUrl;
+      document.getElementById('pdf-title').textContent = pdfUrl.split('/').pop();
+      document.getElementById('pdf-popup').style.display = "block";
+    }
+
+    function closePdfPopup() {
+      document.getElementById('pdf-iframe').src = "";
+      document.getElementById('pdf-popup').style.display = "none";
+    }
+
+    function toggleFullscreen() {
+      const pdfIframe = document.getElementById('pdf-iframe');
+      const fullscreenIcon = document.getElementById('fullscreen-icon');
+      
+      if (!document.fullscreenElement) {
+        // Entrer en plein écran pour l'iframe
+        if (pdfIframe.requestFullscreen) {
+          pdfIframe.requestFullscreen();
+        } else if (pdfIframe.mozRequestFullScreen) { /* Firefox */
+          pdfIframe.mozRequestFullScreen();
+        } else if (pdfIframe.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+          pdfIframe.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (pdfIframe.msRequestFullscreen) { /* IE/Edge */
+          pdfIframe.msRequestFullscreen();
+        }
+        fullscreenIcon.textContent = '🔍 Mode plein écran';
+      } else {
+        // Sortir du plein écran
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { /* Firefox */
+          document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) { /* Chrome, Safari and Opera */
+          document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) { /* IE/Edge */
+          document.msExitFullscreen();
+        }
+        fullscreenIcon.textContent = '🔍 Mode plein écran';
+      }
+    }
+
+    // Écouter les changements d'état du plein écran
+    document.addEventListener('fullscreenchange', updateFullscreenIcon);
+    document.addEventListener('webkitfullscreenchange', updateFullscreenIcon);
+    document.addEventListener('mozfullscreenchange', updateFullscreenIcon);
+    document.addEventListener('MSFullscreenChange', updateFullscreenIcon);
+
+    function updateFullscreenIcon() {
+      const fullscreenIcon = document.getElementById('fullscreen-icon');
+      if (document.fullscreenElement || document.webkitFullscreenElement || 
+          document.mozFullScreenElement || document.msFullscreenElement) {
+        fullscreenIcon.textContent = '🔍 Mode plein écran';
+      } else {
+        fullscreenIcon.textContent = '🔍 Mode plein écran';
       }
     }
   </script>
