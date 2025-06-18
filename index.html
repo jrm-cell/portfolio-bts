@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - [Belerge]</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Belerge Jérémy</div>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#etudes">Études</a></li>
+        <li><a href="#experiences">Expériences</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#veille">Veille</a></li>
+      </ul>
+      <a href="CV bts-ajour.pdf" class="cv-btn" download>Télécharger mon CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="section accueil">
+      <img src="Photo-profile.png" alt="Photo de profil" class="profile-img">
+      <h1>Bonjour, je m'appelle Belerge Jérémy</h1>
+      <p>Actuellement en BTS SIO SISR, passionné d'informatique depuis mon enfance</p>
+      <a href="CV bts-ajour.pdf" class="cv-btn" download>Télécharger mon CV</a>
+    </section>
+
+    <section id="about" class="section about">
+      <h2>À propos de moi</h2>
+      <p>Je m'appelle Belerge Jérémy, j'ai 18 ans et je suis né le 26 septembre 2006.
+        Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations), option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) à Saint Luc Cambrai, je suis passionné d'informatique depuis mon enfance.
+        Grâce aux stages que j'ai pu effectuer durant ma formation en spécialité SN (Systèmes Numériques) à Saint Luc, j'ai découvert le monde professionnel de l'informatique, ce qui m'a fortement motivé à poursuivre dans cette voie.
+        Je m'intéresse tout particulièrement à l'administration des systèmes et des réseaux. Curieux, rigoureux et motivé, je suis toujours prêt à apprendre de nouvelles compétences et à relever des défis techniques.</p>
+    </section>
+
+    <section id="etudes" class="section etudes">
+      <h2>Études</h2>
+      <div class="etudes-buttons">
+        <button class="etude-btn" onclick="openPopup('popup1')">BTS SIO</button>
+        <button class="etude-btn" onclick="openPopup('popup2')">Lycée</button>
+        <button class="etude-btn" onclick="openPopup('popup3')">Collège</button>
+        <button class="etude-btn" onclick="openPopup('popup4')"> Ecole Primaire</button>
+      </div>
+    </section>
+
+    <section id="experiences" class="section experiences">
+      <h2>Expériences</h2>
+      <img src="sto.png" alt="Expérience" class="experience-main-image">
+      <div class="experience-buttons">
+        <button class="etude-btn" onclick="openPopup('exp-popup1')">Présentation</button>
+        <button class="etude-btn" onclick="openPopup('exp-popup2')">Date de stage</button>
+        <button class="etude-btn" onclick="openPopup('exp-popup3')">Ce que cela m'a apporté</button>
+        <a href="https://www.stoelzle.com/stm/?utm_source=google&utm_medium=organic&utm_campaign=googlemybusiness&utm_content=masnieres" target="_blank" class="etude-btn">Site web</a>
+      </div>
+    </section>
+
+    <section id="competences" class="section competences">
+      <h2>Compétences</h2>
+      <div class="etudes-buttons">
+        <button class="etude-btn" onclick="openPopup('comp-popup1')">DNS</button>
+        <button class="etude-btn" onclick="openPopup('comp-popup2')">VLAN</button>
+        <button class="etude-btn" onclick="openPopup('comp-popup3')">VTP</button>
+        <button class="etude-btn" onclick="openPopup('comp-popup4')">SSH</button>
+        <button class="etude-btn" onclick="openPopup('comp-popup5')">GLPI</button>
+        <button class="etude-btn" onclick="openPopup('comp-popup6')">Routage Statique</button>
+        <button class="etude-btn" onclick="openPopup('comp-popup7')">Routage Dynamique</button>
+        <button class="etude-btn" onclick="openPopup('comp-popup8')">InterVlan</button>
+        <button class="etude-btn" onclick="openPopup('comp-popup9')">Veille Informatique</button>
+      </div>
+    </section>
+
+    <section id="projets" class="section projets">
+      <h2>Projets</h2>
+      <li>Projet AP</li>
+    </section>
+
+    <section id="veille" class="section veille">
+      <h2>Veille</h2>
+      <li>Mettre article etc </li>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <p>Email : jeremy.belerge@outlook.fr</a></p>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+
+  <!-- Popups -->
+  <div id="popup1" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup1')">&times;</span>
+      <h3>BTS SIO (2024-2026) </h3>
+      <h5>Le BTS SIO c'est quoi ?</h5>
+      <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme bac+2 qui forme des techniciens capables de développer, déployer et gérer des solutions informatiques en entreprise.</p>
+    <p>Il propose deux spécialités : </p>
+    <br>
+    <h5>SISR</h5>
+    <br>
+    <p> SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</p>
+    <p>
+      L'option SISR du BTS SIO forme aux métiers de l'administration réseau et système. Elle permet d'apprendre à concevoir, déployer et maintenir des infrastructures informatiques sécurisées. On y aborde la gestion des serveurs, la virtualisation, la configuration des équipements réseau (switchs, routeurs), la cybersécurité, et l'assistance technique aux utilisateurs. Cette spécialité prépare aux métiers comme technicien systèmes & réseaux, administrateur réseau ou encore support informatique
+      </p>
+      <br>
+      <h5>SLAM</h5>
+      <br>
+      <p>SLAM (Solutions Logicielles et Applications Métiers)</p>
+      <p>
+        L'option SLAM du BTS SIO est centrée sur le développement d'applications et la programmation. Elle forme aux métiers liés à la conception de logiciels, à la gestion de bases de données et à l'analyse des besoins utilisateurs. Les étudiants y apprennent plusieurs langages (HTML, CSS, JavaScript, PHP, Java, etc.), la modélisation UML, la rédaction de documentation technique, et les tests d'applications.
+  Cette option prépare à des métiers comme développeur web, développeur d'applications, ou analyste programmeur.
+  <br>
+  <br>
+  <h5>Mon option : </h5>
+  <p>Afin d'accomplir mes études de BTS SIO a Saint Luc , j'ai choisi l'option SISR car je suis particulièrement intéressé par l'univers des réseaux, de l'administration système et de la cybersécurité grâce aux stages que j'ai accomplis lors de mes années de lycée. J'aime comprendre comment fonctionne une infrastructure informatique dans son ensemble, apprendre à configurer des serveurs, sécuriser des accès, et assurer le bon fonctionnement des équipements. Cette voie correspond à mon projet professionnel : travailler dans la gestion des systèmes et réseaux d'une entreprise ou évoluer vers la cybersécurité </p>
+      <img src="saintluc.jpg" alt="Saint Luc Cambrai" class="popup-image">
+    </div>
+ 
+ 
+    </p>
+  </div>
+
+  <div id="popup2" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup2')">&times;</span>
+      <h3>Baccalauréat Professionnel (2022-2024)</h3>
+      <p>Terminale SN – Systèmes Numériques (2023-2024) </p>
+      <p>Première SN – Systèmes Numériques(2022-2023) </p>
+      <br>
+      <h5>Le bac professionnel SN c'est quoi ? </h5>
+      <p> Le bac SN (Systèmes Numériques) est un baccalauréat professionnel axé sur les technologies numériques, l'électronique, l'informatique et les réseaux. Il forme les élèves à installer, configurer, maintenir et sécuriser des équipements numériques.
+        Il comporte plusieurs options, dont : </p>
+        <br>
+        <p>
+        -RISC : Réseaux Informatiques et Systèmes Communiquants (informatique/réseaux)
+      </p>
+      <br>
+      <p>
+        -ARED : Audiovisuels, Réseaux et Équipements Domestiques
+      </p>
+      <br>
+        Pour ma part, j'ai choisi l'option RISC
+        <br>
+        <h5>
+        Pourquoi RISC ? 
+        </h5>
+        <br>
+        <p>
+        J'ai choisi l'option RISC car elle se concentre sur les réseaux et les systèmes informatiques, des domaines qui m'intéressent particulièrement et qui sont essentiels dans le monde numérique actuel et l'option RISC m'a attiré car j'aime comprendre comment fonctionnent les réseaux, configurer des systèmes, résoudre des pannes, et intervenir concrètement sur des infrastructures
+      
+        </p>
+      <img src="saintluc.jpg" alt="Saint Luc Cambrai" class="popup-image">
+      <h3>Seconde Générale(2021-2022)</h3>
+      <p> Suite à l'obtention de mon brevet, j'ai pris la décision d'intégrer un lycée général à Saint Luc. Ce fut un changement conséquent, notamment en raison du passage d'un environnement rural à un cadre plus urbain. Cependant, n'ayant pas réussi cette année, et sur les recommandations de l'équipe éducative, j'ai choisi de me réorienter en bac professionnel SN. Ce choix s'est révélé être une excellente décision, tant sur le plan personnel que scolaire et professionnel</p>
+      <img src="general.jpg" alt="Seconde Générale" class="popup-image">
+    </div>
+  </div>
+
+  <div id="popup3" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup3')">&times;</span>
+      <h3>Collège (2017-2020)</h3>
+      <p>Le Collège Général Pharamond Savary situé à Gouzeaucourt, sans option spécifique, offre un programme général d'éducation pour les élèves. Cet établissement propose un enseignement varié couvrant un large éventail de matières, allant des matières scientifiques en passant par les matières littéraire sans oublier celles artistiques. Les élèves y acquièrent des connaissances fondamentales dans différents domaines tout en développant leurs compétences transversales, telles que la communication, la résolution de problèmes et la pensée critique</p>
+      <img src="Colleg gouz.jpg" alt="Collège Gouzeaucourt" class="popup-image">
+    </div>
+  </div>
+
+  <div id="popup4" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup4')">&times;</span>
+      <h3>Ecole Primaire (2009 - 2017)</h3>
+      <p>L'École primaire publique de Gouzeaucourt propose un enseignement fondamental axé sur l'acquisition des compétences de base : lecture, écriture, mathématiques, découverte du monde et initiation aux activités artistiques et sportives. L'école accompagne les élèves dans leur développement global, en favorisant l'autonomie, la curiosité, le respect des autres et les premières bases du raisonnement logique. C'est au sein de cet environnement bienveillant que j'ai construit les premières fondations de mon parcours scolaire</p>
+      <img src="ecole.jpg" alt="École Primaire Gouzeaucourt" class="popup-image">
+    </div>
+  </div>
+
+  <!-- Experience Popups -->
+  <div id="exp-popup1" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('exp-popup1')">&times;</span>
+      <h3>Présentation de l'Entreprise</h3>
+      <h5>Stoelzle Masnières Parfumerie </h5>
+      <br>
+      <p>Stoelzle Masnières Parfumerie est une entreprise française emblématique située à Masnières, près de Cambrai, dans le département du Nord. Fondée en 1818 sous le nom de Verreries de Masnières par François Boulanger, elle possède plus de 200 ans de savoir-faire dans le travail du verre, notamment dans la parfumerie et la cosmétique de luxe.</p>
+      <br>
+      <h5>Localisation</h5>
+      <p> Rue de Marcoing, 59241 Masnières</p>
+      <img src="Screen_Masnieres.png" alt="Masnieres" class="popup-image">
+      <br>
+    <h5>Rachat</h5>
+    <br>
+    <p>En 2013, la verrerie a été rachetée par le groupe Stoelzle Glass Group, un groupe autrichien familial spécialisé dans le verre d'emballage haut de gamme. À la suite de ce rachat, l'entreprise est devenue Stoelzle Masnières Parfumerie SAS, avec une filiale dédiée à la décoration appelée Stoelzle Masnières Décoration. Ce rachat a permis d'intégrer Masnières au cœur de la stratégie du groupe pour le secteur de la parfumerie de luxe.
+
+      Par ailleurs, l'entreprise appartenait auparavant au groupe Neuman, un groupe industriel autrichien présent dans l'emballage aluminium et le formage de métaux. Le passage de Neuman à Stoelzle a marqué une réorientation stratégique vers une spécialisation 100 % verre, mieux alignée avec le marché de la parfumerie et des cosmétiques.</p>
+      <img src="Neuman_Logo.jpg" alt="Logo Neuman" class="popup-image">
+      <br>
+    <h5>Activités</h5>
+    <br>
+    <p>Stoelzle Masnières est aujourd'hui un centre d'excellence du groupe Stoelzle pour la fabrication de flacons en verre à destination de l'industrie de la parfumerie, cosmétique, et plus récemment, des spiritueux de luxe.
+      Ses infrastructures modernes comprennent : </p>
+      <br>
+      <p>
+      -1 four dernière génération (installé en 2020 pour 20 M€ d'investissement)
+    </p>
+    <p>
+      -5 lignes de production
+    </p>
+      -Capacité de production : 140 millions de flacons/an
+      <p>
+      -Coloration feeder pour produire du verre coloré (noir, vert, etc.)
+    </p>
+    <p>
+      -Atelier de décoration intégré (sérigraphie, laquage, marquage à chaud, etc.)</p>  
+      <br>
+    <h5> Labels et reconnaissance</h5>
+    <p>Label EPV (Entreprise du Patrimoine Vivant) en 2018, reconnaissance de l'État français pour les entreprises artisanales d'excellence.</p>
+    <p>Certifiée ISO 9001, avec des standards élevés de qualité.</p>
+    <br>
+    <h5>Groupe Stoelzle</h5>
+    <br>
+    <p>Le Stoelzle Glass Group, basé en Autriche, est un groupe familial international fondé en 1805. Il possède 6 usines de production en Europe (Autriche, Pologne, République tchèque, Angleterre, France), ainsi que des sites de décoration. Il est l'un des leaders du verre d'emballage pour les marchés de la pharmacie, l'alimentaire, les spiritueux et la parfumerie de luxe.</p>
+    <img src="stoelzlegroup.png" alt="Groupe Stoelzle" class="popup-image">
+    </div>
+  </div>
+
+  <div id="exp-popup2" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('exp-popup2')">&times;</span>
+      <h3>Date de stage</h3>
+      <h5>Première SN</h5>
+      <p>03 Janvier au 21 Janvier 2023 (3 semaines)</p>
+      <p>09 Mai au 10 Juin 2023 (5 semaines )</p>
+      <br>
+      <h5>Terminale SN</h5>
+      <p>27 Novembre au 23 Décembre 2023 (4 semaines) </p>
+      <p>11 Mars au 7 Avril 2024 (4 semaines)</p>
+      <br>
+      <h5>BTS SIO</h5>
+      <p>12 mai au 13 Juin 2025 (5 semaines) </p>
+      <h3>Total : 21 semaines </h3>
+      <img src="sto-loin.jpg" alt="Groupe Stoelzle" class="popup-image">
+    </div>
+  </div>
+
+  <div id="exp-popup3" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('exp-popup3')">&times;</span>
+      <h3>Ce que cela m'a apporté</h3>
+      <p>Description de votre troisième expérience professionnelle. Partagez ici les projets sur lesquels vous avez travaillé et les résultats obtenus.</p>
+    </div>
+  </div>
+
+  <!-- Competence Popups -->
+  <div id="comp-popup1" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup1')">&times;</span>
+      <img src="dns-.jpg" alt="DNS" class="popup-image">
+      <h3>DNS</h3>
+      <br>
+      <h3>Un DNS c'est quoi ?</h3>
+      <p>Le DNS (Domain Name System) est un système qui aide ton ordinateur ou ton téléphone à retrouver un site web à partir de son nom.</p>
+      <a href="TP–AD-DNS-Belerge.pdf" class="cv-btn" download style="display: inline-block; margin-top: 1rem;">Télécharger TP sur le DNS</a>
+    </div>
+  </div>
+
+  <div id="comp-popup2" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup2')">&times;</span>
+      <img src="vlan.jpg" alt="VLAN" class="popup-image">
+      <h3>VLAN</h3>
+      <p>Description de vos compétences en VLAN. Vous pouvez ajouter ici vos connaissances et expériences avec les réseaux VLAN.</p>
+    </div>
+  </div>
+
+  <div id="comp-popup3" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup3')">&times;</span>
+      <img src="vtp.png" alt="VTP" class="popup-image">
+      <h3>VTP</h3>
+      <p>Le VTP est un protocole propriétaire de Cisco utilisé dans les réseaux informatiques pour gérer les VLANs (Virtual LANs) de façon centralisée sur plusieurs switches.</p>
+      <br>
+      <p>Le VTP permet de synchroniser automatiquement les informations des VLANs entre plusieurs commutateurs (switches) dans un même domaine VTP.
+Grâce à lui , pas besoin de configurer manuellement les VLANs sur chaque switch : une seule configuration sur le switch principal suffit.</p>
+      <a href="TP-VTP.pdf" class="cv-btn" download style="display: inline-block; margin-top: 1rem;">Télécharger TP sur le VTP</a>
+    </div>
+  </div>
+
+  <div id="comp-popup4" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup4')">&times;</span>
+      <img src="ssh.png" alt="SSH" class="popup-image">
+      <h3>SSH</h3>
+      <p>Description de vos compétences en SSH. Vous pouvez ajouter ici vos connaissances et expériences avec les réseaux SSH.</p>
+    </div>
+  </div>
+
+  <div id="comp-popup5" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup5')">&times;</span>
+      <img src="glpi.png" alt="GLPI" class="popup-image">
+      <h3>GLPI</h3>
+      <p>Description de vos compétences en GLPI. Vous pouvez ajouter ici vos connaissances et expériences avec le logiciel GLPI.</p>
+    </div>
+  </div>
+
+  <div id="comp-popup6" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup6')">&times;</span>
+      <img src="statique.png" alt="Routage Statique" class="popup-image">
+      <h3>Routage Statique</h3>
+      <p>Description de vos compétences en Routage Statique. Vous pouvez ajouter ici vos connaissances et expériences avec le routage statique.</p>
+    </div>
+  </div>
+
+  <div id="comp-popup7" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup7')">&times;</span>
+      <img src="dynamique.png" alt="Routage Dynamique" class="popup-image">
+      <h3>Routage Dynamique</h3>
+      <p>Description de vos compétences en Routage Dynamique. Vous pouvez ajouter ici vos connaissances et expériences avec le routage dynamique.</p>
+    </div>
+  </div>
+
+  <div id="comp-popup8" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup8')">&times;</span>
+      <img src="Intervlan.png" alt="InterVlan" class="popup-image">
+      <h3>InterVlan</h3>
+      <p>Description de vos compétences en InterVlan. Vous pouvez ajouter ici vos connaissances et expériences avec les réseaux InterVlan.</p>
+    </div>
+  </div>
+
+  <div id="comp-popup9" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('comp-popup9')">&times;</span>
+      <img src="veille.png" alt="Veille Informatique" class="popup-image">
+      <h3>Veille Informatique</h3>
+      <br>
+      <h3>La Veille Informatique c'est quoi?</h3>
+      <p>La veille informatique est une activité qui consiste à surveiller, rechercher, analyser et exploiter des informations liées aux technologies de l'information (nouvelles tendances, outils, vulnérabilités, innovations, etc.)</p>
+      <p>Elle peut concerner plusieurs domaines :</p>
+      <br>
+      <p>Veille technologique : nouveautés en matériel, logiciels, langages et plus </p>
+      <br>
+      <p>Veille de sécurité : menaces, failles, cyberattaques, correctifs.</p>
+      <br>
+      <p>Veille juridique : lois et réglementations en lien avec l'informatique.</p>
+      <br>
+      <p>Veille concurrentielle : innovations chez les concurrents ou dans le secteur.</p>
+      <br>
+      <p>Veille stratégique : anticiper les évolutions du marché numérique.</p>
+      <br>
+      <h3>Pourquoi c'est important ?</h3>
+      <br>
+      <p>La veille informatique est importante car elle permet de rester à jour dans un domaine en constante évolution. Elle est essentielle pour garantir la sécurité des systèmes, en détectant rapidement les nouvelles menaces ou failles. Elle favorise également l'innovation en permettant de découvrir de nouvelles technologies ou méthodes, ce qui aide à anticiper les évolutions du marché. Grâce à une veille efficace, il est possible de prendre des décisions éclairées, en choisissant les solutions les plus adaptées. Enfin, elle contribue à gagner en efficacité, en identifiant des outils ou pratiques qui permettent d'optimiser le temps et les ressources</p>
+      <br>
+      <h2>Mes outils</h2>
+      <br>
+      <h3>Feedrabbit</h3>
+      <br>
+      <p>Il me permet de recevoir une notification par mail afin de m'avertir qu'un article est sorti. Il suffit simplement de choisir ses flux RSS.</p>
+      <img src="feedrabbit.png" alt="Feed Rabbit" class="popup-image">
+      <br>
+      <h3>Discord</h3>
+      <br>
+      <p>Grâce a un bot Discord connecté aux flux RSS nous notifie dès qu'un nouvel article est publié dans l'un de ces flux.</p>
+      <img src="discord.jpg" alt="Discord" class="popup-image">
+      <img src="discord-screen.png" alt="Discord Screen" class="popup-image">
+    </div>
+  </div>
+
+  <script>
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = "block";
+    }
+
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = "none";
+    }
+
+    // Close popup when clicking outside of it
+    window.onclick = function(event) {
+      if (event.target.classList.contains('popup')) {
+        event.target.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
